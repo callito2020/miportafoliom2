@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Mi Portafolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Sobre Mí</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Habilidades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="container mt-5 fade-in-left">
+            <h1>Sobre Mí</h1>
+            <p><strong>Nombre:</strong> CLAUDIO CASTILLO PARDO</p>
+            <p><strong>Descripción:</strong> Soy un apasionado programador con experiencia en desarrollo de software y soluciones tecnológicas. Me especializo en desarrollo web, aplicaciones móviles, y me encanta resolver problemas complejos con soluciones creativas. Mi enfoque está en la programación orientada a objetos y el desarrollo ágil. Siempre busco aprender nuevas tecnologías y mejorar mis habilidades.</p>
+        </section>
+
+        <section id="skills" class="container mt-5">
+            <h2>Habilidades</h2>
+            <ul>
+                <li><i class="fas fa-code"></i> Lenguajes de Programación: Python, JavaScript. Desarrollo Web: HTML, CSS, React.</li>
+                <li><i class="fas fa-laptop-code"></i> Bases de Datos: SQL, MongoDB. Herramientas y Tecnologías: Git, Docker, Jenkins.</li>
+                <li><i class="fas fa-database"></i> Metodologías Ágiles: Scrum, Kanban.</li>
+            </ul>
+        </section>
+
+        <section id="projects" class="container mt-5">
+            <h2>Proyectos</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="project1.jpg" class="card-img-top" alt="Proyecto 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Mi primera página</h5>
+                            <p class="card-text">Descripción: Es una aplicación web para gestión de tareas, construida con React y Node.js. Incluye funcionalidades como autenticación de usuarios y una interfaz intuitiva.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="container mt-5">
+            <h2>Contacto</h2>
+            <form id="contact-form">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="message" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-hover">Enviar</button>
+            </form>
+            <div id="response-message"></div> <!-- Respuesta al formulario -->
+        </section>
+    </main>
+
+    <footer class="text-center mt-5">
+        <p>&copy; 2024 Mi Portafolio</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+

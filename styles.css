@@ -1,80 +1,391 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
-/* Reseteo básico y tipografía */
-body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-  }
-  
-  header {
-    margin-bottom: 20px;
-  }
-  
-  main {
-    padding: 20px;
-  }
-  
-  /* Estilizar sección "Sobre Mí" */
-  #about {
-    opacity: 0;
-    transform: translateX(-30px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  }
-  
-  #about.visible {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  
-  /* Estilos de los formularios y botones */
-  #contact {
-    margin-top: 40px;
-  }
-  
-  .btn-hover {
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .btn-hover:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
-  }
-  
-  /* Respuesta de contacto */
-  #response-message {
-    display: none;
-    background-color: #d4edda;
-    border-color: #c3e6cb;
-    color: #155724;
-    font-size: 1.1rem;
-    padding: 15px;
-    border-radius: 5px;
-  }
-  
-  /* Animaciones de tarjetas y botones */
-  .card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Media queries */
-  @media (max-width: 768px) {
-    .navbar-nav {
-      text-align: center;
-    }
-  
-    .navbar-collapse {
-      margin-top: 10px;
-    }
-  
-    /* Estilos para la animación de entrada */
-    .fade-in-left {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  
+:root{
+
+  /* Colores */
+  --color-fondo: hsl(207, 40%, 8%);
+  --color-titulos: #e5e5e5 ;
+  --color-subtitulos:  #c6c5c6;
+
+  /* Fuentes */
+  --fuente-titulos: 'Poppins', sans-serif;
+
+  /* Paneles */
+  --color-panel:  #100020 ;
+
+  /* Color principal */
+  --color-principal:  #c267fd ;
+
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: var(--color-fondo);
+}
+.icono_contacto{
+  color:   #9458e0  ;
+  transition-duration: 1s;
+  transition-property: color;
+}
+.icono_contacto:hover{
+  color: white;
+}
+
+.icono_contacto_tel{
+  color:   #9458e0  ;
+  transition-duration: 1s;
+  transition-property: color;
+}
+.icono_contacto_tel:hover{
+  color:    #59c3ff   ;
+}
+
+.icono_contacto_lin{
+  color:   #9458e0  ;
+  transition-duration: 1s;
+  transition-property: color;
+}
+.icono_contacto_lin:hover{
+  color:     #86d3ff    ;
+}
+
+.barra-mobiles {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+
+}
+
+#nav-tab{
+  background-color:  #3a0e56 ;
+  border-radius: 16px;
+}
+
+.SubTitulos{
+  color: var(--color-subtitulos);
+  font-size: 0.75rem;
+  font-family: var(--fuente-titulos);
+  font-weight: 400;
+}
+
+.Titulo{
+  color: var(--color-titulos);
+  font-size: 1.25rem;
+  font-family: var(--fuente-titulos);
+  font-weight: 600;
+}
+
+.TituloQuienSoy{
+  color: var(--color-titulos);
+  font-size: 2.25rem;
+  font-family: var(--fuente-titulos);
+  font-weight: 600;
+}
+
+.SubTitulosQuienSoy{
+  color: var(--color-subtitulos);
+  font-size: 1.4rem;
+  font-family: var(--fuente-titulos);
+  font-weight: 400;
+}
+
+.ParrafoQuienSoy{
+  color: var(--color-subtitulos);
+  font-size: 0.9rem;
+  font-family: var(--fuente-titulos);
+  font-weight: 400;
+}
+
+.proyRemeras{
+  background-image: url("../img/proyectos/proyecto_1.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+  filter: brightness(50%);
+  transition-property: transform;
+  transition-duration: 1s;
+}
+
+.proyRemeras:hover{
+  transform: scale(1.05);
+}
+
+.proyAutos{
+  background-image: url("../img/proyectos/proyecto_2.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+  filter: brightness(50%);
+  transition-property: transform;
+  transition-duration: 1s;
+}
+
+.proyAutos:hover{
+  transform: scale(1.05);
+}
+
+.proyBlog{
+  background-image: url("../img/proyectos/blog_personal.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+  filter: brightness(50%);
+  transition-property: transform;
+  transition-duration: 1s;
+}
+
+.proyBlog:hover{
+  transform: scale(1.05);
+}
+
+
+/* Colores de fondo para botones */
+
+.nav-link, .nav-link:focus ,.nav-link:hover{
+  color: white !important;
+  background-color: var(--color-fondo) !important;
+}
+
+.nav-link, .nav-link:visited{
+  background-color: transparent !important;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited  {
+  background-color: #7D0AB3 !important;
+  border-color: #7D0AB3 !important;
+}
+
+.btn-outline-primary, .btn-outline-primary:hover, .btn-outline-primary:active, .btn-outline-primary:visited {
+  border-color: #7D0AB3 !important;
+}
+
+/* Varios */
+
+h2 {
+  color: var(--color-titulos);
+  font-family: var(--fuente-titulos);
+  font-size: 1.75rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+p {
+  color: var(--color-titulos);
+  font-size: 1rem;
+  font-family: var(--fuente-titulos);
+  font-weight: 300;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* Sección Sobre Mí */
+
+#sobreMi {
+  padding-top: 5rem;
+}
+
+.sobreMi-data {
+  padding-left: 5rem;
+}
+
+.sobreMi-info{
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 1rem;
+  padding-bottom: 2.5rem;
+}
+
+.sobreMi-info-box {
+  padding-inline: 1rem;
+}
+
+.img-sobreMi-estilo {
+  border-radius: 10px;
+}
+
+/* Sección Habilidades */
+
+#habilidades {
+  padding-top: 5rem;
+}
+
+/* Sección Proyectos */
+
+#proyectos {
+  padding-top: 5rem;
+}
+
+/* Sección Contacto */
+
+#contacto {
+  padding-top: 5rem;
+}
+
+
+.contact__icon{
+  color: white;
+  font-size: 2rem;
+  margin-right: var(--mb-0-75);
+}
+
+.contact__content{
+  background-color: #7D28B3;
+  border-radius: .5rem;
+  backdrop-filter: blur(8px);
+  padding: .75rem 1rem .25rem;
+}
+
+.contact__name{
+  border: none;
+  background-color: var(--input-color);
+  color: var(--color-titulos);
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font);
+  font-family: var(--body-font);
+  outline: none;
+  padding: .25rem .5rem .5rem 0;
+  width: 100%;
+}
+
+.contact__email{
+  border: none;
+  background-color: var(--input-color);
+  color: var(--color-titulos);
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font);
+  font-family: var(--body-font);
+  outline: none;
+  padding: .25rem .5rem .5rem 0;
+  width: 100%;
+}
+
+.contact__msg{
+  border: none;
+  background-color: var(--input-color);
+  color: var(--color-titulos);
+  font-family: var(--body-font);
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  outline: none;
+  padding: .25rem .5rem .5rem 0;
+  width: 100%;
+}
+
+.button:hover{
+  cursor: pointer;
+}
+.circuloPerfil{
+  background-image:linear-gradient( to bottom, #9e36e1 ,var(--color-fondo));
+  height: 100%;
+  width:105px;
+}
+
+.circuloPerfilGrande{
+  background-image:linear-gradient( to bottom, #9e36e1 ,var(--color-fondo));
+  width:265px;
+  height: auto;
+}
+
+.Nombre{
+  color:  var(--color-titulos);
+  height: auto;
+  font-family: var(--fuente-titulos);
+  font-weight: 600;
+}
+
+.Trabajo{
+  color: var(--color-subtitulos);
+  font-size: 0.80rem;
+  font-family: var(--fuente-titulos);
+  margin-top: -0.60rem;
+}
+
+.Paneles{
+  background-color: var(--color-panel);
+}
+
+i {
+  color: white;
+}
+
+.TituloBrand{
+  color: var(--color-titulos);
+  font-size: 20px;
+  font-family: var(--fuente-titulos);
+  text-decoration: none;
+  transition-property: color;
+  transition-duration: 0.3s;
+}
+
+.TituloBrand:hover{
+  color:#9e36e1;
+}
+
+.TitulosNav {
+  color: var(--color-subtitulos);
+  font-size: 16px;
+  font-family: var(--fuente-titulos);
+  margin: 0px 10px;
+  text-decoration: none;  
+  transition-property: color;
+  transition-duration: 0.3s;
+}
+
+.TitulosNav:hover{
+  color:#9e36e1;
+}
+.skills__content {
+  row-gap: 3.5rem;
+}
+
+.skills__title {
+  color: var(--color-titulos);
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.skills__box {
+  column-gap: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.skills__group {
+  align-content: flex-start;
+  display: grid;
+  row-gap: 1rem;
+}
+
+.skills__data {
+  color: var(--color-titulos);
+  column-gap: .5rem;
+  display: flex;
+}
+
+.skills__data i {
+  color: lightcoral;
+  font-size: 1rem;
+}
+
+.skills__name {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.skills__level {
+  color: var(--color-subtitulos);
+  font-size: 0.80rem;
+}
+
+.skills__area {
+  padding-inline: 4rem;
+}
